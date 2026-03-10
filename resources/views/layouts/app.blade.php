@@ -64,6 +64,12 @@
 </head>
 
 <body class="container mx-auto mt-10 mb-10 max-w-3xl">
+  @if(!request()->is('dashboard'))
+  <a href="{{ url('/dashboard') }}" class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition">
+      Go to Dashboard
+  </a>
+  @endif
+
   @yield('content')
 </body>
 
